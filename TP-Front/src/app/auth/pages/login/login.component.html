@@ -1,0 +1,22 @@
+<section>
+  <div class="login-box">
+    <img class="avatar" src="assets/images/login-avatar.png" alt="Logo">
+    <h1 class="mb-2">TP TEST</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="signIn()">
+      <label for="email">Email</label>
+      <input type="text" formControlName="email" placeholder="Enter Email">
+      <strong class="text-danger mb-1" *ngIf="loginFormValidation('email')">
+        The email is required and must be a valid email.
+      </strong>
+
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" placeholder="Enter Password">
+      <strong class="text-danger mb-1" *ngIf="loginFormValidation('password')">
+        The password is required and must be at least 8 characters long.
+      </strong>
+
+      <input type="submit" value="Sign In" class="rounded-pill">
+
+    </form>
+  </div>
+</section>

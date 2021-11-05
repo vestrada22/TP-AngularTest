@@ -1,0 +1,9 @@
+<div class="card">
+  <img [src]="character.image" class="card-img-top img-fluid" [alt]="character.name">
+  <div class="card-body text-center">
+      <h5 class="card-title">{{character.name}}</h5>
+      <p class="card-text">{{ character.status }}</p>
+      <p class="card-text"><small class="text-muted">{{ character.gender }}</small></p>
+      <button (click)="characterDetails()" class="btn btn-outline-primary btn-block">View Details</button>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<h1 class="ml-3 text-light">{{ character.name | uppercase }}<small> ({{ character.species | uppercase }})</small></h1>
+<hr class="bg-light">
+<div class="row ml-3">
+    <div class="col-md-4">
+        <img [src]="character.image" [alt]="character.name" class="img">
+        <br><br>
+        <a class="btn btn-outline-danger btn-block" [routerLink]="['/main/characters']">Come Back</a>
+    </div>
+    <div class="col-md-8 text-light">
+        <h3>Estado - {{ character.status }}</h3>
+        <hr class="bg-light">
+        <p>Creado - {{ character.created | date:'yyyy' }}</p>
+    </div>
+</div>
